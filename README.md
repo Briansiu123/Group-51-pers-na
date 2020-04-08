@@ -1,6 +1,6 @@
 # pers-na
-A handsome guy
+Siu Kam Ho 3035570420
 and 
-Tso Ken Ork 3033064960
+programming god Tso Ken Ork 3033064960
 
 Game Description:

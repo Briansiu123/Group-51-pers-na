@@ -49,8 +49,5 @@ int main(){
   atk=1;
   money=10;
   merchant(money,hp,atk);
-  cout<<"money="<<money<<endl;
-  cout<<"hp="<<hp<<endl;
-  cout<<"atk="<<atk<<endl;
   return 0;
 }

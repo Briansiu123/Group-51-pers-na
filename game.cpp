@@ -26,7 +26,7 @@ int merchant(int &souls,int &hp,int &atk, int &lv){
     else if(item=="spells"){
       if(souls>=4){
         atk+=2;
-        money-=4;
+        souls-=4;
         lv++
         cout<<"your atk has increased"<<endl;
       }
@@ -48,8 +48,7 @@ int battle(int &souls, int &hp, int &atk, int &lv){
 }
 
 int main(){
-  int souls;
-  int hp, atk,lv;
+  int souls, hp, atk,lv;
   hp=5;
   atk=1;
   souls=10;

@@ -1,53 +1,57 @@
 #include <iostream>
 using namespace std;
-int merchant(int &money,int &hp,int &atk){
+int merchant(int &souls,int &hp,int &atk, int &lv){
   cout<<"Welcome to the Witcher Shop."<<endl;
-  cout<<"What do you want to buy?"<<endl;
+  cout<<"What do you want to improve?"<<endl;
   cout<<"your hp:"<<hp<<" "<<"your atk:"<<atk<<endl;
   char cont;
   cont='Y';
   while(cont=='Y'){
-    cout<<"The amount of money you have:$"<< money << endl;
+    cout<<"The amount of souls you have:$"<< souls << endl;
     cout<<"armor:$2, spells:$4"<<endl;
-    cout<<"please enter what you want to buy:";
+    cout<<"please enter what you want to improve:";
     string item;
     cin >> item;
     cout<<endl;
     if(item=="armor"){
-      if(money>=2){
+      if(souls>=2){
         hp+=3;
-        money-=2;
+        souls-=2;
+        lv++;
         cout<<"your hp has increased"<<endl;
       }
       else
-      cout<<"Sorry, you don't have enough money."<<endl;
+      cout<<"Sorry, you don't have enough souls."<<endl;
     }
     else if(item=="spells"){
-      if(money>=4){
+      if(souls>=4){
         atk+=2;
         money-=4;
         cout<<"your atk has increased"<<endl;
       }
       else
-      cout<<"Sorry, you don't have enough money."<<endl;
+      cout<<"Sorry, you don't have enough souls."<<endl;
     }
     else{
-      cout<<"This item doesn't exist."<<endl;
+      cout<<"This ability doesn't exist."<<endl;
     }
     cout<<"your hp:"<<hp<<" "<<"your atk:"<<atk<<endl;
-    cout<<"Is there anything you still want to buy? (Y/N):";
+    cout<<"Is there anything you still want to improve? (Y/N):";
     cin>>cont;
   }
   cout<<"Have a nice day."<<endl;
   return 0;
+}
 
+int battle(int &souls, int &hp, int &atk, int &lv){
 }
 int main(){
-  int money;
-  int hp, atk;
+  int souls;
+  int hp, atk,lv;
   hp=5;
   atk=1;
-  money=10;
-  merchant(money,hp,atk);
+  souls=10;
+  lv=1
+  merchant(souls,hp,atk,lv);
   return 0;
 }

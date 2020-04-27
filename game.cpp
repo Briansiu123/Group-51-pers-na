@@ -45,6 +45,7 @@ int merchant(int &souls,int &hp,int &atk, int &lv){
 
 int battle(int &souls, int &hp, int &atk, int &lv){
 }
+
 int main(){
   int souls;
   int hp, atk,lv;

@@ -44,15 +44,17 @@ int merchant(int &souls,int &hp,int &atk, int &lv){
   return 0;
 }
 
-int battle(int &souls, int &hp, int &atk, int &lv){
+int battle(int &souls, int &hp, int &atk, int &lv, int &flasks){
+  return 0;
 }
 
 int main(){
-  int souls, hp, atk,lv;
+  int souls, hp, atk,lv,flasks;
   hp=5;
   atk=1;
   souls=10;
-  lv=1
+  lv=1;
+  flasks=3;
   merchant(souls,hp,atk,lv);
   return 0;
 }

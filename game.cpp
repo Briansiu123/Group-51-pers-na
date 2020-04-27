@@ -27,7 +27,7 @@ int merchant(int &souls,int &hp,int &atk, int &lv){
       if(souls>=4){
         atk+=2;
         souls-=4;
-        lv++
+        lv++;
         cout<<"your atk has increased"<<endl;
       }
       else

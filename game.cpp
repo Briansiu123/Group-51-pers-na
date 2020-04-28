@@ -45,6 +45,22 @@ int merchant(int &souls,int &hp,int &atk, int &lv){
 }
 
 int battle(int &souls, int &hp, int &atk, int &lv, int &flasks){
+  int dungeon,tem;
+  char explore='Y';
+  while(explore=='Y'){
+    tem=hp;
+    cout<<"please enter a random number of the dungeon that you want to explore:";
+    cin>>dungeon;
+    cout<<endl;
+    while(tem>0){
+      srand(dungeon);
+      
+    }
+
+    cout<<"Continue on exploring? (Y/N)";
+    cin>>explore;
+    cout<<endl;
+  }
   return 0;
 }
 

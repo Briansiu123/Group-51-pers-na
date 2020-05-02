@@ -150,6 +150,7 @@ int battle(int &souls, int hp, int strength, int lv, int flasks, int intelligenc
       cout<<"Your hp:"<<tem_hp<<" "<<"Mp:"<<tem_mp<<" "<<"Flasks:"<<tem_flask<<endl;
       cout<<"Action: attack / spell / flask (heal yourself) ";
       cout<<endl;
+      cout<<endl;
       cout<<"Please enter what you want to do:";
       cin>>action;
       if(action=="attack"){
@@ -212,6 +213,9 @@ int battle(int &souls, int hp, int strength, int lv, int flasks, int intelligenc
       else{
         cout<<"This action doesn't exist"<<endl;
       }
+      tem_hp-=enemy_atk;
+      if(enemy_hp>0)
+      cout<<"You're attacked by the enemy! You hp is reduced by "<<enemy_atk<<"."<<endl;
     }
     if(tem_hp<=0){
       cout<<"You lose the fight and escape."<<endl;

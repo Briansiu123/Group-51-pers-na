@@ -369,7 +369,7 @@ int main()
         exit(1);
     }
     string name;
-    int souls,hp, lv, flasks,fireball, combustion, firestorm;
+    int souls,hp, lv, flasks, combustion, firestorm;
     hp=10;
     souls=10;
     lv=1;

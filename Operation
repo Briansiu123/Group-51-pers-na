@@ -369,6 +369,12 @@ int main()
     }
     string name;
     int souls,hp, lv, flasks,fireball, combustion, firestorm;
+    hp=10;
+    souls=10;
+    lv=1;
+    flasks=3;
+    combustion=0;
+    firestorm=0;
     cout<<"Please enter your name: "<<endl;
     cin >> name;
     fout << name;

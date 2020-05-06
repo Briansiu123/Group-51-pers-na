@@ -238,7 +238,7 @@ int merchant(int &souls, int &hp, int &strength, int &lv, int &intelligence, int
 }
 
 int battle(int &souls, int hp, int strength, int lv, int flasks, int intelligence, int combustion, int firestorm, int agility, int luck){
-  int dungeon,tem_hp,tem_mp,tem_flask,demon,dragon,slime,encounter,enemy_hp,enemy_atk,drop;
+  int dungeon,tem_hp,tem_mp,tem_flask,encounter,enemy_hp,enemy_atk,drop;
   char explore='Y';
   string action;
   while(explore=='Y'){

@@ -231,6 +231,7 @@ int merchant(int &souls, int &hp, int &strength, int &lv, int &intelligence, int
     cout<<endl;
   }
   cout<<"Have a nice day."<<endl;
+  cout<<"You spent a day in shopping."<<endl;
   cout<<endl;
   return 0;
 }
@@ -353,6 +354,8 @@ int battle(int &souls, int hp, int strength, int lv, int flasks, int intelligenc
     cin>>explore;
     cout<<endl;
   }
+  cout<<"You spent a day in exploring."<<endl;
+  cout<<endl;
   return 0;
 }
 
@@ -365,6 +368,7 @@ int main()
         exit(1);
     }
     string name;
+    int souls,hp, lv, flasks,fireball, combustion, firestorm;
     cout<<"Please enter your name: "<<endl;
     cin >> name;
     fout << name;
@@ -519,6 +523,7 @@ int main()
             }
             if (choice == "C"){
                 cout<<"Exploring"<<endl;
+                battle(souls, hp, strength, lv, flasks,intelligence,combustion,firestorm,agility,luck);
             }
             if (choice == "D"){
                 cout<<"Fishing"<<endl;
@@ -567,6 +572,7 @@ int main()
             }
             if (choice == "G"){
                 cout<<"Shopping"<<endl;
+                merchant(souls,hp,strength,lv,intelligence,combustion,firestorm,agility,luck);
             }
             if (choice == "H"){
                 cout<<"Sleeping"<<endl;

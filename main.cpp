@@ -614,9 +614,10 @@ int main()
     if (personality >7 && personality <10){
         cout<<"YOLO";
         srand(time(NULL));	
-        for (int i = 0; i < 5; ++i){ 
-            cout << rand() % 10 + 1 << endl;
-        }
+        strength =  rand() % 10 + 1;
+        intelligence =  rand() % 10 + 1;
+        agility =  rand() % 10 + 1;
+        luck =  rand() % 10 + 1;
         cout<<"Strength : "<<strength<<endl;
         cout<<"Intelligence : "<<intelligence<<endl;
         cout<<"Agility : "<<agility<<endl;

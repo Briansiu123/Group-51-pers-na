@@ -543,7 +543,7 @@ int main()
     cout<<"B: Walk around and see if you can find any clue to where you are"<<endl;
     cout<<"C: Sleep and pretend everything will be fine after your sleep"<<endl;
     string choiceA;
-    cout<<"Please input your choice(Capital letter A,B or C)";
+    cout<<"Please input your choice(Capital letter A,B or C)"<<endl;
     cin >> choiceA;
     cout<<endl;
     cout<<"You realized you still have no idea where you are and you heard footsteps you have to act quick!"<<endl;
@@ -592,7 +592,6 @@ int main()
     if (choiceC == "C"){
         personality = personality + 3;
     }
-    cout<<"Your personality is : "<<personality<<endl;
     if (personality >2 && personality <5){
         cout<<"You are a pessimistic"<<endl;
         
@@ -617,7 +616,7 @@ int main()
         cout<<"Luck : "<<luck<<endl;
     }
     if (personality >7 && personality <10){
-        cout<<"YOLO";
+        cout<<"YOLO"<<endl;
         srand(time(NULL));	
         strength =  rand() % 10 + 1;
         intelligence =  rand() % 10 + 1;
@@ -664,7 +663,7 @@ int main()
             cout<<"Sleep: In case you are bored, why not take a sleep?"<<endl;
         }
         action = 10;
-        while (action > -1){
+        while (action != 0){
             cout<<endl;
             cout<<"You have "<< action<<" action"<<endl;
             cout<<"Please choose an action:"<<endl;
@@ -688,7 +687,7 @@ int main()
             }
             if (choice == "B"){
                 cout<<"Chopping Trees"<<endl;
-                wood = 1 + strength/2;
+                wood = wood + 1 + strength/2;
                 cout<<"You now have "<<wood<<"wood"<<endl;
             }
             if (choice == "C"){
@@ -748,8 +747,7 @@ int main()
                 cout<<"Sleeping"<<endl;
                 cout<<"You want to sleep but you realize once you sleep you will wake up tomorrow, do you really want to sleep?"<<endl;
                 cout<<"But it is too late now you already slept"<<endl;
-                i = i + 1 ;
-                action = 10;
+                action = 1;
             }
             if (choice == "I"){
                 cout<<"Studying"<<endl;
@@ -770,6 +768,7 @@ int main()
                 }
             }
             action = action - 1;
+        }
         if (i == 10){
             cout<<"You wake up from your bed and realize something is wrong"<<endl;
             cout<<"You look at the window and realize the sky is still dark, there is only pale darkness"<<endl;
@@ -822,5 +821,5 @@ int main()
             }
         }
     }
-    return 0;}
+    return 0;
 }

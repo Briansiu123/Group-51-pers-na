@@ -396,7 +396,7 @@ int battle(int &souls, int hp, int strength, int lv, int flasks, int intelligenc
 }
 
 int boss(int &souls, int hp, int strength, int lv, int flasks, int intelligence, int combustion, int firestorm, int agility, int luck){
-  int tem_hp,tem_mp,tem_flask,encounter,enemy_hp,enemy_atk,drop;
+  int tem_hp,tem_mp,tem_flask,enemy_hp,enemy_atk,drop;
   char determination;
   determination='Y';
   string action;

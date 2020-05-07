@@ -161,7 +161,7 @@ int Fishing()   //For fishing, a quick way to get rich or waste time
     fish = 0;
 }
 int merchant(int &souls, int &hp, int &strength, int &lv, int &intelligence, int &combustion, int &firestorm,int &agility, int &luck){
-  cout<<"Welcome to the Witcher House!"<<endl;
+  cout<<"Welcome to the Witcher House!"<<endl; //to level up and learn skills
   cout<<"What do you want to improve?"<<endl;
   cout<<"Your level:"<<lv<<" "<<"Hp:"<<hp<<" "<<"Intelligence:"<<intelligence<<" "<<"Strength:"<<strength<<" "<<"Agility:"<<agility<<" "<<"Luck:"<<luck<<endl;
   char cont;
@@ -273,7 +273,7 @@ int merchant(int &souls, int &hp, int &strength, int &lv, int &intelligence, int
 }
 
 int battle(int &souls, int hp, int strength, int lv, int flasks, int intelligence, int combustion, int firestorm, int agility, int luck){
-  int dungeon,tem_hp,tem_mp,tem_flask,encounter,enemy_hp,enemy_atk,drop;
+  int dungeon,tem_hp,tem_mp,tem_flask,encounter,enemy_hp,enemy_atk,drop; //a dungeon where you have to fight with enemy
   char explore='Y';
   string action;
   while(explore=='Y'){
@@ -396,7 +396,7 @@ int battle(int &souls, int hp, int strength, int lv, int flasks, int intelligenc
 }
 
 int boss(int &souls, int hp, int strength, int lv, int flasks, int intelligence, int combustion, int firestorm, int agility, int luck){
-  int tem_hp,tem_mp,tem_flask,enemy_hp,enemy_atk,drop;
+  int tem_hp,tem_mp,tem_flask,enemy_hp,enemy_atk,drop; //The final boss fight
   char determination;
   determination='Y';
   string action;

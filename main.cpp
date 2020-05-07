@@ -620,7 +620,8 @@ int main()
                 cout<<"Sleeping"<<endl;
                 cout<<"You want to sleep but you realize once you sleep you will wake up tomorrow, do you really want to sleep?"<<endl;
                 cout<<"But it is too late now you already slept"<<endl;
-                action = -1;
+                i = i + 1 ;
+                action = 10;
             }
             if (choice == "I"){
                 cout<<"Studying"<<endl;
@@ -649,19 +650,19 @@ int main()
             cout<<"With that said, monsters suddenly appeared out of nowhere and began to attack the village"<<endl;
             cout<<"At this crucial time, you decided to?"<<endl;
             cout<<"Defend the place you love(Defend)"<<endl;
-            cout<<"Hide until everything have passed(Hide)"<<end;
+            cout<<"Hide, find a place to hide(Hide)"<<endl;
             cout<<"Run, run and run(Run)"<<endl;
             cout<<"Sleep, this is just another dream(Sleep)"<<endl;
             string player_final_choice;
             cin >> player_final_choice;
-            if (player_final_choice == Defend){
+            if (player_final_choice == "Defend"){
                 
             }
-            if (player_final_choice == Hide){
+            if (player_final_choice == "Hide"){
                 if (int(luck) >= 5){
                     cout<<"You hide"<<endl;
                     cout<<"Your existence is so low that no one can find you"<<endl;
-                    cout<<"END: I AM INVISIBLE"
+                    cout<<"END: I AM INVISIBLE";
                 }
                 else{
                     cout<<"You are a teenager"<<endl;
@@ -670,7 +671,7 @@ int main()
                     cout<<"BAD END: HERE I COME"<<endl;
                 }
             }
-            if (player_final_choice == Run){
+            if (player_final_choice == "Run"){
                 if (int(agility) > 15){
                     cout<<"You run like wind"<<endl;
                     cout<<"You ran into the forest, leaving everyone behind you"<<endl;
@@ -685,12 +686,13 @@ int main()
                     cout<<"BAD END: RUNNING INTO THE TOMB"<<endl;
                 }
             }
-            if (player_final_choice == Sleep){
+            if (player_final_choice == "Sleep"){
                 cout<<"Even though you heard people screaming and yelling, you told yourself this is a dream"<<endl;
                 cout<<"You slept"<<endl;
-                cout<<"Forever."
+                cout<<"Forever.";
+                cout<<"END: Sleeping BEAUTY"<<endl;
             }
         }
     }
-    return 0;
+    return 0;}
 }

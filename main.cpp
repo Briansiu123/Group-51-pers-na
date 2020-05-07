@@ -776,7 +776,7 @@ int main()
             string player_final_choice;
             cin >> player_final_choice;
             if (player_final_choice == "Defend"){
-                boss(int &souls, int hp, int strength, int lv, int flasks, int intelligence, int combustion, int firestorm, int agility, int luck);
+                boss(souls, hp, strength, lv, flasks, intelligence, combustion, firestorm, agility, luck);
             }
             if (player_final_choice == "Hide"){
                 if (int(luck) >= 5){

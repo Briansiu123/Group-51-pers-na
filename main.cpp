@@ -498,6 +498,7 @@ int boss(int &souls, int hp, int strength, int lv, int flasks, int intelligence,
           else{
               cout<<"Even though you've given up, you suddenly recall the days that you spent with the others, you decide to save them."<<endl;
               cout<<"With your determination, you regain all your hp and mp."<<endl;
+              determination='Y';
               tem_hp=hp;
               tem_mp=intelligence;
           }

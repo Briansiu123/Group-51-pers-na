@@ -422,8 +422,8 @@ int boss(int &souls, int hp, int strength, int lv, int flasks, int intelligence,
         cout<<"You reduce enemy's hp by "<<strength<<"."<<endl;
       }
       else if(action=="escape"){
-          cout<<"There's no way to escape from your destiny."<<endl;
-          cout<<"Face It.""<<endl;
+        cout<<"There's no way to escape from your destiny."<<endl;
+        cout<<"Face It.""<<endl;
       }
       else if(action=="spell"){
         cout<<"spells: fireball(-2mp)";

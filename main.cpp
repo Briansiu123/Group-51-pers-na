@@ -288,19 +288,19 @@ int battle(int &souls, int hp, int strength, int lv, int flasks, int intelligenc
     encounter=rand()%4;
     if(encounter==1 || encounter==3){
       cout<<"You encounter a slime!"<<endl;
-      enemy_hp=lv*0.8;
+      enemy_hp=lv*1.5;
       enemy_atk=lv*0.2;
       drop=lv*(luck*0.1)+1;
     }
     else if(encounter==2){
       cout<<"You encounter a dragon!"<<endl;
-      enemy_hp=lv*1.3;
+      enemy_hp=lv*2;
       enemy_atk=lv*0.5;
       drop=lv*0.2*luck+2;
     }
     else{
       cout<<"You encounter a demon!"<<endl;
-      enemy_hp=lv*1.8;
+      enemy_hp=lv*2.5;
       enemy_atk=lv;
       drop=lv*0.4*luck+3;
     }
@@ -642,6 +642,7 @@ int main()
     
     int hours = 0; //For Gaming
     
+    cout<<endl;
     cout<<"Hi";
     for (int i = 1; i < 11; ++i){
         cout<<"Today is day: "<<i<<endl;   //The basic guide of every action and to let the player know what they can do
@@ -650,6 +651,7 @@ int main()
             cout<<"Every action will have their own outcome which may or may not affect the outcome of the story"<<endl;
             cout<<"There is also a success/failure check for every action which depends on the stat of yourself"<<endl;
             cout<<"Below is a brief introduction of the actions"<<endl;
+            cout<<endl;
             cout<<"Communication: Talking with villagers in the village. Sometimes it is just some basic chatting but sometimes they may tell you some important information."<<endl;
             cout<<"Chopping: Well, no one can say no to some extra woods, you can sell them to the merchant in exchange for money or perhaps there are some other use?"<<endl;
             cout<<"Hunting: Technology isn't that advanced and the only way to heal up your wounds is to ensure your tummy is full and ofcourse there might be some special use."<<endl;
@@ -663,6 +665,7 @@ int main()
         }
         action = 10;
         while (action > -1){
+            cout<<endl;
             cout<<"You have "<< action<<" action"<<endl;
             cout<<"Please choose an action:"<<endl;
             cout<<"A : Communication"<<endl;
@@ -678,6 +681,7 @@ int main()
             string choice;
             choice = "none";
             cin >> choice;
+            cout<<endl;
             if (choice == "A"){
                 cout<<"Communicating"<<endl;
                 Talking();

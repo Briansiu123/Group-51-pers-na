@@ -595,10 +595,10 @@ int main()
     if (personality >2 && personality <5){
         cout<<"You are a pessimistic"<<endl;
         
-        strength = 2;
-        intelligence = 4;
-        agility = 3;
-        luck = 1;
+        strength = 4;
+        intelligence = 8;
+        agility = 6;
+        luck = 2;
         cout<<"Strength : "<<strength<<endl;
         cout<<"Intelligence : "<<intelligence<<endl;
         cout<<"Agility :"<<agility<<endl;
@@ -606,10 +606,10 @@ int main()
     }
     if (personality >4 && personality <8){
         cout<<"You are a optimist"<<endl;
-        strength = 3;
-        intelligence = 2;
-        agility = 2;
-        luck = 3;
+        strength = 6;
+        intelligence = 4;
+        agility = 4;
+        luck = 6;
         cout<<"Strength : "<<strength<<endl;
         cout<<"Intelligence : "<<intelligence<<endl;
         cout<<"Agility : "<<agility<<endl;

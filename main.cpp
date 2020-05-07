@@ -4,29 +4,29 @@
 #include <cstdlib>
 using namespace std;
 
-int train()
+int train() //For the player to train their stats
 {
     int check;
     srand(time(NULL));
     check = rand() % 2 + 1;
     if (check == 1){
-        cout<<"Outside is raining and you decided to train some other day"    
+        cout<<"Outside is raining and you decided to train some other day"<<endl;    
     }
     if (check == 2){
-        cout<<"You begin your trainning"
+        cout<<"You begin your trainning"<<endl;
         int path;
         srand(time(NULL));
-        path = rand() % 2 + 1;
+        path = rand() % 2 + 1;   //To see if the Strength of Agility of the player increase
         if (path == 1){
-            return 1
+            return 1;
         }
         if (path == 2){
-            return 2
+            return 2;
         }
     } 
 }
 
-bool study()
+bool study() //For the player to increase their intelligence
 {
     int check;
     srand(time(NULL));
@@ -35,16 +35,16 @@ bool study()
         cout<<"You fall asleep"<<endl;
     }
     if (check == 2){
-        cout<<"Your intelligence increased!"
-        return true
+        cout<<"Your intelligence increased!"<<endl;
+        return true;
     }
     
 }
-void Talking()
+void Talking()   //For the player to communicate with villagers
 {
     string walk;
     int wander = 0;
-    int check = 0;
+    int check = 0;  //To check if the player can communicate with the villagers successfully or not 
     cout<<"It is a beautiful day outside, birds are sining, flowers are blooming, on days like these, you decide to go talk to the villagers"<<endl;
     cout<<"You know where can you find the villagers but where should you go?"<<endl;
     cout<<"A : Blacksmith"<<endl;
@@ -98,16 +98,51 @@ void Talking()
         } 
         if (check == 2){
             cout<<"You discover ????? house"<<endl;
-            cout<<"You find out the house is locked and you need a key"<<endl;
+            cout<<"You enter the house and finally meet ?????"<<endl;
+            string choice;
+            cout<<"Nice to meet you, is great to see you enjoying your time here"<<endl;
+            cout<<"Do you wanna play a little game?"<<endl;
+            cout<<"But to be fair, it will cost you a little(Y/N)"<<endl;
+            cin>>choice;
+            if (choice == "N"){
+                cout<<"Well, then continue your life, I am eager to see where you will end up"<<endl;
+            }
+            if (choice == "Y"){
+                cout<<"Life is full of choices and luck plays a big part in every one of them, let's see how your luck is"<<endl;
+                cout<<"Now give me a number"<<endl;
+                int number;
+                cin >> number;
+                int * guess = new int [number];
+                
+                for (int i = 0; i < number; ++i){
+                    guess[i] = i;
+                }
+                guess[number-number/2] = 520;
+                
+                cout<<"You have given me the number "<<number<<"from 0 to "<<number<<"there is one mutant"<<endl;
+                cout<<"find the mutant and you win if not well you lose"<<endl;
+                int player_guess;
+                cin >> player_guess;
+                if (number-number/2 == player_guess){
+                    cout<<"You have found it, now I shall tell you one little secret"<<endl;
+                    cout<<"There will be a final battle at the end of day 10, you win you can enjoy a good ending, you fail, you died"<<endl;
+                    cout<<"Therefore the 10 days you should be preparing for the final fight"<<endl;
+                }
+                if (number-number/2 != player_guess){
+                    cout<<"Seems like your luck is just average."<<endl;
+                    cout<<"Betterluck next time"<<endl;
+                }
+                
+            }
         }
     }
 }
 
-int Fishing()
+int Fishing()   //For fishing, a quick way to get rich or waste time
 {
     int fish;
     srand(time(NULL));
-    fish = rand() % 10 + 1;
+    fish = rand() % 10 + 1; //To see what can the player get
     if (fish == 10){
         return 5;
     }
@@ -224,7 +259,7 @@ int merchant(int &souls, int &hp, int &strength, int &lv, int &intelligence, int
     if(combustion==1)
     cout<<" "<<"combustion";
     if(firestorm==1)
-    cout<<" "<<"firestorm";
+    cout<<" "<<"firestorm"; 
     cout<<endl;
     cout<<endl;
     cout<<"Is there anything you still want to improve? (Y/N)";
@@ -370,6 +405,7 @@ int main()
     }
     string name;
     int souls,hp, lv, flasks, combustion, firestorm;
+    int strength, intelligence, agility, luck;
     hp=10;
     souls=10;
     lv=1;
@@ -379,7 +415,7 @@ int main()
     cout<<"Please enter your name: "<<endl;
     cin >> name;
     fout << name;
-    cout<<"Welcome"<<" "<<name<<endl;
+    cout<<"Welcome"<<" "<<name<<endl;   //The opening of the game, deciding the basic stats of the player at the beginning
     cout<<"To begin with, let me ask you a few questions"<<endl;
     cout<<"The questions will decide your personality which will have a slight impact on the stats of your character in game"<<endl;
     cout<<"You wake up and find yourself in an unfamilar place, what will you do?"<<endl;
@@ -436,7 +472,7 @@ int main()
     cout<<"Your personality is : "<<personality<<endl;
     if (personality >2 && personality <5){
         cout<<"You are a pessimistic"<<endl;
-        int strength, intelligence, agility, luck;
+        
         strength = 2;
         intelligence = 4;
         agility = 3;
@@ -448,7 +484,6 @@ int main()
     }
     if (personality >4 && personality <8){
         cout<<"You are a optimist"<<endl;
-        int strength, intelligence, agility, luck;
         strength = 3;
         intelligence = 2;
         agility = 2;
@@ -459,7 +494,7 @@ int main()
         cout<<"Luck : "<<luck<<endl;
     }
     if (personality >7 && personality <10){
-        cout<<"YOLO"; int strength, intelligence, agility, luck;
+        cout<<"YOLO";
         srand(time(NULL));	
         for (int i = 0; i < 5; ++i){ 
             cout << rand() % 10 + 1 << endl;
@@ -473,7 +508,7 @@ int main()
     
     int action;
     
-    int Wood = 0; //For Chopping
+    int wood = 0; //For Chopping
     
     int food = 0; //For Hunting
     int teeth = 0; //For Hunting
@@ -485,7 +520,7 @@ int main()
     
     cout<<"Hi";
     for (int i = 1; i < 11; ++i){
-        cout<<"Today is day: "<<i<<endl;
+        cout<<"Today is day: "<<i<<endl;   //The basic guide of every action and to let the player know what they can do
         if (i == 1){
             cout<<"There are 10 action points for you every day and you can choose what to do"<<endl;
             cout<<"Every action will have their own outcome which may or may not affect the outcome of the story"<<endl;
@@ -574,7 +609,7 @@ int main()
                 cout<<"Hunting"<<endl;
                 cout<<"You spend some time in the forest"<<endl;
                 food = food + 1 + intelligence/10 + agility/10;
-                teeth = teeth + food/2
+                teeth = teeth + food/2;
                 cout<<"You now have "<<food<<" food and "<<teeth<<" teeth"<<endl;
             }
             if (choice == "G"){
@@ -606,6 +641,55 @@ int main()
                 }
             }
             action = action - 1;
+        if (i == 10){
+            cout<<"You wake up from your bed and realize something is wrong"<<endl;
+            cout<<"You look at the window and realize the sky is still dark, there is only pale darkness"<<endl;
+            cout<<"When you are still wondering what is happening, a dark figure has suddenly appeared in the middle of the village"<<endl;
+            cout<<"THE TIME HAS COME, DARKNESS SHALL RISE FROM YOUR BLOOD"<<endl;
+            cout<<"With that said, monsters suddenly appeared out of nowhere and began to attack the village"<<endl;
+            cout<<"At this crucial time, you decided to?"<<endl;
+            cout<<"Defend the place you love(Defend)"<<endl;
+            cout<<"Hide until everything have passed(Hide)"<<end;
+            cout<<"Run, run and run(Run)"<<endl;
+            cout<<"Sleep, this is just another dream(Sleep)"<<endl;
+            string player_final_choice;
+            cin >> player_final_choice;
+            if (player_final_choice == Defend){
+                
+            }
+            if (player_final_choice == Hide){
+                if (int(luck) >= 5){
+                    cout<<"You hide"<<endl;
+                    cout<<"Your existence is so low that no one can find you"<<endl;
+                    cout<<"END: I AM INVISIBLE"
+                }
+                else{
+                    cout<<"You are a teenager"<<endl;
+                    cout<<"You really expect you can hide in a place such that no one can find you?"<<endl;
+                    cout<<"The darkness engulf you"<<endl;
+                    cout<<"BAD END: HERE I COME"<<endl;
+                }
+            }
+            if (player_final_choice == Run){
+                if (int(agility) > 15){
+                    cout<<"You run like wind"<<endl;
+                    cout<<"You ran into the forest, leaving everyone behind you"<<endl;
+                    cout<<"You managed to be the only survivor"<<endl;
+                    cout<<"But you lost your family, your friends, your loved ones, your home"<<endl;
+                    cout<<"END: SURVIVED BUT AT WHAT COST?"<<endl;
+                }
+                if (int(agility) <= 15){
+                    cout<<"You run"<<endl;
+                    cout<<"But can you run away from your destiny?"<<endl;
+                    cout<<"The darkness engulf you"<<endl;
+                    cout<<"BAD END: RUNNING INTO THE TOMB"<<endl;
+                }
+            }
+            if (player_final_choice == Sleep){
+                cout<<"Even though you heard people screaming and yelling, you told yourself this is a dream"<<endl;
+                cout<<"You slept"<<endl;
+                cout<<"Forever."
+            }
         }
     }
     return 0;

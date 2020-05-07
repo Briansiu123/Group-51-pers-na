@@ -502,6 +502,7 @@ int boss(int &souls, int hp, int strength, int lv, int flasks, int intelligence,
               tem_hp=hp;
               tem_mp=intelligence;
           }
+      }
       if(enemy_hp<0){
             cout<<endl;
             cout<<"Congratulation, you eliminate the boss! You save the village and you will no longer fight again."<<endl;

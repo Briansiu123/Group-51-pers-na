@@ -395,6 +395,123 @@ int battle(int &souls, int hp, int strength, int lv, int flasks, int intelligenc
   return 0;
 }
 
+int boss(int &souls, int hp, int strength, int lv, int flasks, int intelligence, int combustion, int firestorm, int agility, int luck){
+  int dungeon,tem_hp,tem_mp,tem_flask,encounter,enemy_hp,enemy_atk,drop;
+  char determination;
+  determination='Y';
+  string action;
+  tem_hp=hp;
+  tem_mp=intelligence;
+  tem_flask=flasks;
+  cout<<"This is the final fight, you've finally reached the end."<<endl;
+  cout<<"The destiny of you will depend on the result of this fight."<<endl;
+  enemy_hp=hp*3;
+  enemy_atk=strength*2;
+  drop=lv*(luck*0.1)+500;
+    while(tem_hp>0 && enemy_hp>0 && determination=='Y'){
+      cout<<endl;
+      cout<<"Enemy's hp:"<<enemy_hp<<endl;
+      cout<<"Your hp:"<<tem_hp<<" "<<"Mp:"<<tem_mp<<" "<<"Flasks:"<<tem_flask<<endl;
+      cout<<"Action: attack / spell / flask (heal yourself) / escape ";
+      cout<<endl;
+      cout<<endl;
+      cout<<"Please enter what you want to do:";
+      cin>>action;
+      if(action=="attack"){
+        enemy_hp-=strength;
+        cout<<"You reduce enemy's hp by "<<strength<<"."<<endl;
+      }
+      else if(action=="escape"){
+          cout<<"There's no way to escape from your destiny."
+          cout<<"Face It.""<<endl;
+      }
+      else if(action=="spell"){
+        cout<<"spells: fireball(-2mp)";
+        if(combustion==1){
+          cout<<" "<<"combustion(-5mp)";
+        }
+        if(firestorm==1){
+          cout<<" "<<"firestorm(-10mp)";
+        }
+        cout<<endl;
+        cout<<"Please enter which spell you want to use:";
+        cin>>action;
+        cout<<endl;
+        if(action=="fireball"){
+          if(tem_mp>=2){
+            tem_mp-=2;
+            enemy_hp-=agility*2;
+            cout<<"You reduce enemy's hp by "<<agility*2<<"."<<endl;
+          }
+          else
+          cout<<"Sorry, you don't have enough mp to do that."<<endl;
+        }
+        else if(action=="combustion"){
+          if(tem_mp>=5){
+            tem_mp-=5;
+            enemy_hp-=agility*3;
+            cout<<"You reduce enemy's hp by "<<agility*3<<"."<<endl;
+          }
+          else
+          cout<<"Sorry, you don't have enough mp to do that."<<endl;
+        }
+        else if(action=="firestorm"){
+          if(tem_mp>=10){
+            tem_mp-=10;
+            enemy_hp-=agility*5;
+            cout<<"You reduce enemy's hp by "<<agility*5<<"."<<endl;
+          }
+          else
+          cout<<"Sorry, you don't have enough mp to do that."<<endl;
+        }
+        else
+        cout<<"This spell doesn't exist."<<endl;
+      }
+      else if(action=="flask"){
+        if(tem_flask>=0){
+          tem_flask--;
+          tem_hp+=hp*0.3;
+          int heal;
+          heal=hp*0.3;
+          cout<<"You hp increases by "<<heal<<"."<<endl;
+        }
+        else
+        cout<<"Sorry, you don't have any flasks left."<<endl;
+      }
+      else{
+        cout<<"This action doesn't exist"<<endl;
+      }
+      if(enemy_hp>0 && tem_hp>0){
+          tem_hp-=enemy_atk;
+          cout<<"You're attacked by the enemy! You hp is reduced by "<<enemy_atk<<"."<<endl;
+      }
+      if(enemy_hp>0 && tem_hp<=0){
+          cout<<"You lose the fight, and this time, you can't escape."<<endl;
+          cout<<"Will you still choose to fight? (Y/N)"<<endl;
+          cin >> determination;
+          if(determination=='Y'){
+              cout<<"Yes!Don't give up, you're the only hope of the village."<<endl;
+              cout<<"With your determination, you regain all your hp and mp."<<endl;
+              tem_hp=hp;
+              tem_mp=intelligence;
+          }
+          else{
+              cout<<"Even though you've given up, you suddenly recall the days that you spent with the others, you decide to save them."<<endl;
+              cout<<"With your determination, you regain all your hp and mp."<<endl;
+              tem_hp=hp;
+              tem_mp=intelligence;
+          }
+      if(enemy_hp<0){
+            cout<<endl;
+            cout<<"Congratulation, you eliminate the boss! You save the village and you will no longer fight again."<<endl;
+            cout<<"You get "<<drop<<" souls!"<<endl;
+            souls+=drop;
+      }
+    cout<<endl;
+    }
+  cout<<endl;
+  return 0;
+}
 int main()
 {
     ofstream fout("Player.txt");

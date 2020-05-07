@@ -537,6 +537,7 @@ int main()
     cout<<"Welcome"<<" "<<name<<endl;   //The opening of the game, deciding the basic stats of the player at the beginning
     cout<<"To begin with, let me ask you a few questions"<<endl;
     cout<<"The questions will decide your personality which will have a slight impact on the stats of your character in game"<<endl;
+    cout<<endl;
     cout<<"You wake up and find yourself in an unfamilar place, what will you do?"<<endl;
     cout<<"A: Find if you have your phone and check your location in G__gle Map"<<endl;
     cout<<"B: Walk around and see if you can find any clue to where you are"<<endl;
@@ -544,6 +545,7 @@ int main()
     string choiceA;
     cout<<"Please input your choice(Capital letter A,B or C)";
     cin >> choiceA;
+    cout<<endl;
     cout<<"You realized you still have no idea where you are and you heard footsteps you have to act quick!"<<endl;
     cout<<"A: Hide behind the door and prepare to attack"<<endl;
     cout<<"B: Find something to defend yourself with"<<endl;
@@ -551,12 +553,14 @@ int main()
     cout<<"What is your choice?"<<endl;
     string choiceB;
     cin >> choiceB;
+    cout<<endl;
     cout<<"The door is opened and you found out is a ?"<<endl;
     cout<<"A: Ghost"<<endl;
     cout<<"B: A human"<<endl;
     cout<<"C: ???(some unknown creature)"<<endl;
     string choiceC;
     cin >> choiceC;
+    cout<<endl;
     int personality;
     personality = 0;
     if (choiceA == "A"){

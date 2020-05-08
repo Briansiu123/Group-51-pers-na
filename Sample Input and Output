@@ -1,1 +1,92 @@
+Ken  //The name of the player
+C    //Choices that will decide the personality of player hence the stats of player
+C
+C
 
+Day 1:
+E    //E is gaming which has no use except for unlocking secret acheievement
+E
+E
+B    //B is chopping some trees
+I    //I is studying, increasing the intelligence of player
+I
+J    //J is training, increasing the agility and strength
+J
+I
+J
+
+Day 2:
+A   //A is communication, talking to villagers in down
+B   //B is a choice in communication, going to talk to the elderlies
+
+B
+B
+B
+D   //D is fishing, a way to get rich quick
+D  
+D   
+F   //Hunting.
+F
+F
+H   //H is sleeping, skipping the day
+
+Day 3:
+H
+
+Day 4:
+H
+
+Day 5:
+H
+
+Day 6:
+A      
+D      //There is a guessing game here, guess correctly will tell you a secret
+Y
+6
+4
+
+A
+D
+
+A
+D
+Y
+8
+4
+
+A
+D
+
+A
+D
+N
+
+H
+
+Day 7:
+G       //G is shopping, can increase the stats of players
+helath  //increasing health
+N
+
+C      //C is exploration, a way to get soul to use in shopping
+5      //Generate random enemy
+attack
+N
+
+H
+
+Day 8:
+H
+
+Day 9:
+H
+
+Day 10:
+H
+Defend   //Defend is one of the actions player can do in ending, will decide what endings the player will get
+attack   
+attack
+N       //The player can give up if the boss is too hard to fight
+attack
+attack

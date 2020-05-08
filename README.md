@@ -24,3 +24,6 @@ Features/Functions of The Game:
 -Basic Battle system: Calculate and compare the stats of players and enemies to decide the outcome of the battle
 -File I/O: create a save file of the progress and read this file every time the game start
 -Program codes in multiple files: a program with list of game events, a program of merchant system, a program of battle system
+
+Compilation and execution instructions:
+mentioned in the Makefile, main.cpp will be compiled and executed. 
